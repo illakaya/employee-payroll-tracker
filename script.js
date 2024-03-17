@@ -1,9 +1,36 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
+// Create a function that will check if entered value is a number and convert it into a number (as prompts return strings). If not, returns $0
+const salaryNum = function(x) {
+  if (isNaN(x)) {
+    return 0;
+  } else {
+    return Number(x);
+  }
+}
+
 // Collect employee data
 const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
+  // create a variable to hold the array
+  let employeeData = [];
+  // create a while loop with iterations through an indexed array, storing each array item as objects with properties first, last name and salary
+  let moreEmployee = true;
+  let i = 0;
+  while (moreEmployee) {
+    employeeData[i] = {
+      firstName: prompt(`Enter first name:`),
+      lastName: prompt(`Enter last name:`),
+      salary: salaryNum(prompt(`Enter salary:`)),
+    }
+    // add 1 to index i so that data is not overwritten
+    i++;
+    // create a prompt for users to stop entering more data or not
+    moreEmployee = confirm(`Do you want to add another employee?`);
+  }
+  // the function returns the array data to be stored in variable employee
+  return employeeData;
 }
 
 // Display the average salary
