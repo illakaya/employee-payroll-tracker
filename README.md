@@ -2,9 +2,13 @@
 
 ## Description
 
-This project was provided by the University of Sydney which required me to modify the starter code to create an application that enables a payroll manager to view and manage employee payroll data. This app allowed me to practice writing JavaScript code that powers the dynamically updated HTML and CSS. Editing existing starter codes allowed me to forward and backward map as to what information needs to be collected and how I should name the variables. Through this project, I learnt to:
+This project was provided by the University of Sydney which required me to modify the starter code to create an application that enables a payroll manager to view and manage employee payroll data. This app allowed me to practice writing JavaScript code that powers the dynamically updated HTML and CSS. Editing existing starter codes allowed me to forward and backward map as to what information needs to be collected and how I should name the variables. Through this project, I learnt to use JavaScript to:
 
-- 
+- Log text to the console using template literals
+- Create variables, objects and arrays
+- Create functions
+- Use for/while loops
+- Apply methods and create conditional statements using comparison operators
 
 ## Installation
 
