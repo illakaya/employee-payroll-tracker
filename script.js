@@ -1,20 +1,21 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
-// Create a function that will check if entered value is a number and convert it into a number (as prompts return strings). If not, returns $0
-const salaryNum = function(x) {
-  if (isNaN(x)) {
-    return 0;
-  } else {
-    return Number(x);
-  }
-}
-
 // Collect employee data
 const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
   // create a variable to hold the array
   let employeeData = [];
+  // Create a function that will check if entered value is a number and convert it into a number (as prompts return strings). If not, returns $0
+  const salaryNum = function(x) {
+    // if (isNaN(x)) {
+    //   return 0;
+    // } else {
+    //   return Number(x);
+    // }
+  // simple if else, ternary conditions suggested by Joem Casusi
+    return isNaN(x) ? 0 : Number(x);
+  }
   // create a while loop with iterations through an indexed array, storing each array item as objects with properties first, last name and salary
   let moreEmployee = true;
   let i = 0;
@@ -29,7 +30,6 @@ const collectEmployees = function() {
     // create a prompt for users to stop entering more data or not
     moreEmployee = confirm(`Do you want to add another employee?`);
   }
-  // the function returns the array data to be stored in variable employee
   return employeeData;
 }
 
@@ -53,7 +53,6 @@ const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
   // create local variable for the function which randomly generates a number between 0 (inclusive) and array.length (exclusive), then rounds it down to the integer
   let num = Math.floor(Math.random()*employeesArray.length);
-  console.log(num);
   console.log(`Congratulations to ${employeesArray[num].firstName} ${employeesArray[num].lastName}, our random drawing winner!`);
 }
 
